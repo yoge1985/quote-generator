@@ -6,6 +6,7 @@ const quoteAuthor = document.querySelector('.quote-author');
 const printBtn = document.getElementById('print');
 const newQouteBtn = document.getElementById('new-quote');
 
+
 newQouteBtn.addEventListener('click',async function() {
 
    let currentQuote = await newQuote();
@@ -15,6 +16,10 @@ newQouteBtn.addEventListener('click',async function() {
    //set the quote author
    quoteAuthor.innerHTML = currentQuote.author;
 });
+
+printBtn.addEventListener('click', function() {
+  print();
+})
 
 
 //provide a new quote from the apiQuotes array
